@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>數字鍵練習遊戲</title>
+  <link rel="stylesheet" href="styles/numberclick.css">
+</head>
+<body>
+  <h1>數字鍵練習遊戲</h1>
+  <div id="game"></div>
+  <div id="message"></div>
+  <div id="result"></div>
+
+  <div class="controls">
+    <label>
+      <input type="checkbox" id="voiceToggle" checked>
+      啟用語音
+    </label>
+  </div>
+
+  <button id="restart" style="display:none;">重玩一次</button>
+
+  <audio id="correctSound" src="https://actions.google.com/sounds/v1/cartoon/clang_and_wobble.ogg"></audio>
+  <audio id="wrongSound" src="https://actions.google.com/sounds/v1/cartoon/wood_plank_flicks.ogg"></audio>
+
+  <script src="js/numberclick.js"></script>
+</body>
+</html>

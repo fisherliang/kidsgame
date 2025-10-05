@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <title>分類貼紙樂園 Category Garden</title>
+  <link rel="stylesheet" href="styles/classify.css">
+</head>
+<body>
+<div class="app" role="application" aria-label="分類貼紙樂園">
+  <header>
+    <div>
+      <div class="sr-only" aria-live="polite" id="live"></div>
+      <h1>分類貼紙樂園</h1>
+      <div style="font-size:14px;color:#475569;">拖一拖、放一放：把貼紙放進正確的家！</div>
+    </div>
+    <div class="toolbar">
+      <button id="btn-new">下一回合</button>
+      <button class="secondary" id="btn-voice">語音：開</button>
+    </div>
+  </header>
+
+  <section class="stage">
+    <div class="zones" aria-label="分類區域">
+      <div class="zone" data-accept="水果" aria-label="水果區" aria-dropeffect="move">
+        <h2>🍎 水果</h2>
+        <div class="hint">放水果在這裡</div>
+      </div>
+      <div class="zone" data-accept="動物" aria-label="動物區" aria-dropeffect="move">
+        <h2>🐻 動物</h2>
+        <div class="hint">放動物在這裡</div>
+      </div>
+      <div class="zone" data-accept="交通工具" aria-label="交通工具區" aria-dropeffect="move">
+        <h2>🚗 交通工具</h2>
+        <div class="hint">放車車/飛機在這裡</div>
+      </div>
+    </div>
+
+    <div class="rail" id="rail" aria-label="可拖曳貼紙區"></div>
+  </section>
+
+  <div class="footer">
+    <div class="status" id="status">把貼紙放到正確的家</div>
+  </div>
+</div>
+<div class="confetti" id="confetti" aria-hidden="true"></div>
+
+<script src="js/classify.js"></script>
+</body>
+</html>

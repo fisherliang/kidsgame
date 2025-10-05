@@ -1,0 +1,105 @@
+:root {
+      --bg-color: #0d1b2a;
+      --card-color: #1b263b;
+      --accent-color: #00b4d8;
+      --text-color: #e0e1dd;
+      --hover-color: #415a77;
+    }
+
+body {
+  font-family: "Noto Sans TC", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+header {
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+
+header h1 {
+  font-size: 2rem;
+  letter-spacing: 1px;
+  color: var(--accent-color);
+}
+
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  width: 90%;
+  max-width: 900px;
+}
+
+.game-card {
+  background-color: var(--card-color);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.game-card:hover {
+  transform: translateY(-5px);
+  background-color: var(--hover-color);
+}
+
+.game-card a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.bmc-container {
+  position: fixed;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  text-align: center;  
+}
+
+.bmc-btn {
+  display: inline-block;
+  background-color: #0D254D;
+  color: #FFDD00;
+  font-family: 'Poppins', 'Noto Sans TC', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 50px;
+  text-decoration: none;
+  border: 2px solid #FFDD00;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+.bmc-btn:hover {
+  background-color: #FFDD00;
+  color: #0D254D;
+  transform: translateY(-2px);
+}
+
+/* 行動裝置自動縮放 */
+  @media (max-width: 600px) {
+    .bmc-btn {
+      font-size: 16px;
+      padding: 10px 22px;
+    }
+  }
+
+
+footer {
+  margin-top: auto;
+  padding: 20px;
+  font-size: 0.9rem;
+  opacity: 0.6;
+}
