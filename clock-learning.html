@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>認識時鐘</title>
+  <link rel="stylesheet" href="styles/clock-learning.css">
+</head>
+<body>
+  <h1>⏰ 認識時鐘(鍵盤版)</h1>
+  <div id="hint">目前控制：分針（長針）</div>
+  <div id="clock-container">
+    <canvas id="clock" width="300" height="300"></canvas>
+  </div>
+
+  <div id="time-values">
+    <div>時針：<span id="hour-value">12 點</span></div>
+    <div>分針：<span id="minute-value">00 分</span></div>
+  </div>
+
+  <div class="control-buttons">
+    <button id="hour-minus">時針 − (Z)</button>
+    <button id="hour-plus">時針 ＋ (X)</button>
+    <button id="minute-minus">分針 − (N)</button>
+    <button id="minute-plus">分針 ＋ (M)</button>
+  </div>
+
+  <div id="controls">
+    <button id="start-btn">開始出題</button>
+    <button id="check-btn">確認答案</button>
+    <label><input type="checkbox" id="voice-toggle" checked> 開啟語音</label>
+    <div id="difficulty">
+      <label>難度：</label>
+      <select id="level">
+        <option value="1">Level 1：整點</option>
+        <option value="2">Level 2：半點</option>
+        <option value="3">Level 3：20分</option>
+        <option value="4">Level 4：15分</option>
+        <option value="5">Level 5：1分</option>
+      </select>
+    </div>
+  </div>
+  <p id="message"></p>
+
+  <script src="js/clock-learning.js"></script>
+</body>
+</html>
